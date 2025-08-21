@@ -1,0 +1,32 @@
+Test Cases:
+
+Case 1: Normal Operation
+
+Input	Expected Behaviour
+TrainDetected = TRUE	%M0.0 set to TRUE, all outputs activate
+GateClosed = TRUE	%M0.1 set to TRUE, systems proceed
+TrainDeparted = TRUE	%M0.0 set to FALSE, all outputs activate
+GateClosed = FALSE	%M0.1 set to FALSE, systems proceed
+
+
+Case 2: Gate Closure Failure
+
+Input	Expected Behaviour
+TrainDetected = TRUE	%M0.0 set to TRUE, all outputs activate
+GateClosed = False	%M0.1 remains at false, emergency measures activate
+
+Case 3: Gate Opening Failure
+
+Input	Expected Behaviour
+TrainDetected = TRUE	%M0.0 set to TRUE, all outputs activate
+GateClosed = TRUE	%M0.1 set to TRUE, systems proceed
+TrainDeparted = TRUE	%M0.0 set to FALSE, all outputs activate
+GateClosed = TRUE	%M0.1 remains true, emergency measure activates
+
+Case 4: Early departure input
+
+Input	Actual Behaviour	Expected Behaviour
+TrainDetected = TRUE	%M0.0 set to TRUE, all outputs activate	
+GateClosed = TRUE	%M0.1 set to TRUE, systems proceed	
+TrainDeparted = TRUE	%M0.0 set to FALSE, all outputs activate	Input should be ignored until certain
+GateClosed = FALSE	%M0.1 set to FALSE, systems proceed	
