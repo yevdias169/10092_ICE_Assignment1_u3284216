@@ -1,0 +1,18 @@
+Exploring Alternatives
+
+1)
+
+-	Logic flow 1: Simple Implementation
+o	This is the most barebones interpretation, where the sensor would pick up that a train is incoming and would then lower the gates until the train has been verified as departed from the crossing 
+
+-	Logic flow 2: Safeguarding 
+o	This implementation has a few more failsafe’s that the barebones interpretation. There will be more forms of input validation, such as verifying whether or not the gate is open, or closed, which will be determine by an operational input that stores the value of the gates current state. 
+
+My choice will be logic flow 2, while remaining simple enough to implement it prioritises safety and is more robust than logic flow 1
+
+
+2) 
+
+ElectroLogIXS System by Siemens Mobility:
+
+Uses an axle counter to detect trains, a sensor is placed at the start and end of a section of rails, the start counter increments values (per wheel) and the end sensor decrements values) if the value is non-zero then the system knows that the space is occupied, meaning the train must fully pass the sensors. To ensure safety the system uses ‘diverse redundancy’. This is where the same logic is run on two differently coded processors, they must agree on every output, otherwise the system is shut down into a safe state. 
