@@ -1,0 +1,29 @@
+Sequence of tasks: 
+
+-	Gates remain open
+-	Train is detected via sensor 
+-	Sensor writes to a bit in data memory that stores the value (TRUE) 
+-	When that bit reads true, it produces an array of outputs (Close gate, sound bells, LED flashes) 
+-	The system continues as such until the departure senor detects the train and then writes to the same bit (FALSE)
+-	System reads the false value in the bit and send an array out outputs (Open gate, LED off, alarm off)
+
+1.	Gates Idle 
+a.	All outputs set to open state by default 
+2.	Train detection
+a.	The sensor detects an input 
+b.	Program logic writes that input into a memory bit (%M0.0) “TRUE”
+3.	System Reaction 
+a.	The PLC reads %M0.0, which will set off an array of outputs specified in an if condition (Close Gate, Bell, LED Lights)
+b.	A sensor detects the gate is fully closed 
+i.	The program writes to a memory bit (%M0.1) to verify closure “TRUE” 
+ii.	If closure is not verified while %M0.0 = “TRUE” program  will execute outputs (notify crew, keep bells and LED’s on until manually disabled)
+4.	Departure detection 
+a.	The departure sensor detects an input 
+b.	Program logic writes the input into %M0.0 “FALSE”
+5.	Return to Idle 
+a.	With %M0.0 set to false the program executes the outputs according to program logic (Open gate, bells off, LED lights off)
+b.	A sensor detects that the gate is fully opened 
+i.	The program writes to a memory bit %M0.1 “FALSE”
+ii.	If opening not verified while %M0.0 = “FALSE” program will execute outputs (notify crew, display “GATE FAILURE” LED sign, LED’s On)
+
+
