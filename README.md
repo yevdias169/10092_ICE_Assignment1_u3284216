@@ -54,7 +54,7 @@ The system includes comprehensive test cases covering:
 - System recovery procedures
 
 ## Technologies Used
-- Draw.io for flowchart creation
+- LucidChart for flowchart creation
 - GitHub for version control
 - AI assistance for solution refinement
 
@@ -65,7 +65,7 @@ The system includes comprehensive test cases covering:
 4. View test results in `Step5_Testing/`
 
 ## Author
-[Your Student ID] - University of Canberra
+Claude Sonnet 4 - on behalf of u3284216 | Yevin Dias
 
 ## License
 This project is for educational purposes as part of coursework requirements.
