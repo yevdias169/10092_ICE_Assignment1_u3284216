@@ -1,0 +1,24 @@
+Exploring the Problem
+
+1)
+
+I am tasked with creating a high-level conceptual logic system to ensure the implementation of a railway crossing is designed safely. 
+
+2) 
+
+Inputs: 
+
+-	Train approaching (input from a sensor placed at a determined distance before the crossing)
+-	Gate lowered (input verification)
+-	Train departed (sensor placed a determined distance after the crossing to verify the train has passed the crossing) 
+
+Outputs: 
+-	Lower gate (an output signal that closes the gate) 
+-	Raise gate (an output signal that raises the gate)
+-	Alarm (to audibly signal that a train is approaching, and the gate is closing) 
+-	Warning lights (lights to accompany the alarm as an extra form of warning) 
+
+3)
+
+Not much in terms of technical constraints, given that the context of this assignment is high-level I am to assume that we have abundant resources and will be able to purchase the technology necessary to implement this logic into the real world, the technology has also been around for a long time. Economically, it will cost some money to implement, however this is trumped by the economic savings that occur by mitigating accidents as well as the social expectation of safety and rules-based roads. Environmentally, this will consume a relatively negligible number of resources. Safeguarding measures are also to be expected legally. The key stakeholders will likely be the train companies (business) train drivers and the general public. The implementation of this safety system is beneficial to all parties (maybe aside from insurance fraud artists who will now find it harder to sue over negligence by the train companies and governing body of railway safety)
+
